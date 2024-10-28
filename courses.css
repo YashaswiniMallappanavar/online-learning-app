@@ -1,0 +1,65 @@
+/* General Reset */
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    line-height: 1.6;
+        background-image: url('mmm.jpg'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position:center; /* Centers the image horizontally and vertically */
+        /* Optional: You can add more styles like background color, etc. */
+    /* Example of more specific styling */
+       
+}
+/* Courses Section */
+.courses {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.course-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.course-card {
+    background-color: rgb(107, 191, 230);
+    padding: 20px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(255, 254, 254, 0.1);
+    margin:10px;
+    justify-content:baseline;
+}
+
+.course-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    color:rgb(0, 0, 0);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.course-card .btn-enroll {
+    background-color: #fff4f4;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+

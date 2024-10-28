@@ -1,0 +1,152 @@
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #e2dada;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('mmm.jpg'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position:center; /* Centers the image horizontally and vertically */
+        /* Optional: You can add more styles like background color, etc. */
+    /* Example of more specific styling */
+    
+    
+        }
+
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    border-radius: 80px;
+        .img{      
+             height: 80px;
+             width: 100px;; 
+    padding: 20px;
+}
+}
+.header h1 {
+    font-size: 2.5em;
+    color: #f0d9d9;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.header p {
+    font-size: 1.1em;
+    color: #c4cde7;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4a90e2;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.navbar a:hover {
+    background-color: #01305f;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #e6f0fa;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.hero h2 {
+    font-size: 2em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #074388;
+    }
+
+.hero p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Button */
+.btn-primary {
+    display: inline-block;
+    background-color: #187ef3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #012d5a;
+}
+
+/* Feature Section */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.feature {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(214, 27, 27, 0.1);
+    text-align: center;
+}
+
+.feature h3 {
+    color: #f8f3f3;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #050505;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #999;
+}
+
+.footer p {
+    margin-top: 10px;
+}

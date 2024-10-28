@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Signup Form</title>
+    <style>
+        /* Style for the back button */
+        .back-button {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            padding: 10px 20px;
+            height: 10px;
+            width:50px;
+            text-align: center;
+            font-size: 16px;
+            background-color: #0f167a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2acacf;
+            margin: 0;
+            padding: 20px;
+            background-image: url('mmm.jpg'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position:center; /* Centers the image horizontally and vertically */
+        /* Optional: You can add more styles like background color, etc. */
+    /* Example of more specific styling */
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: rgb(160, 243, 243);
+            background-image: url('mmm.jpg');
+            box-shadow: 0 0 10px rgba(121, 182, 197, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px;
+            box-sizing: border-box;
+        }
+        .emergency-contacts {
+            margin-bottom: 20px;
+        }
+        button {
+            display: block;
+            width: 50%;
+            padding: 10px;
+            background-color: #086808;
+            color: white;
+            border: none;
+            cursor:pointer; 
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #1897a0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Signup Form</h2>
+    <form id="studentSignupForm">
+        <label for="name">Student Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <label for="gradeLevel">Grade Level:</label>
+        <input type="text" id="gradeLevel" name="gradeLevel" required>
+        <center><button type="submit" onclick="window.location.href='courses.html';">Submit</button></center>
+        <input type="back" value="back" class="back-button" onclick="window.location.href='signup1.html';">
+    </form>
+
+    <div class="output" id="output">
+        <h3>Submitted Student Information</h3>
+        <p><strong>Name:</strong> <span id="outputName"></span></p>
+        <p><strong>Date of Birth:</strong> <span id="outputDob"></span></p>
+        <p><strong>Gender:</strong> <span id="outputGender"></span></p>
+        <p><strong>Address:</strong> <span id="outputAddress"></span></p>
+        <p><strong>Email:</strong> <span id="outputEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="outputPhone"></span></p>
+        <p><strong>Grade Level:</strong> <span id="outputGradeLevel"></span></p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('studentSignupForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form from submitting the traditional way
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const dob = document.getElementById('dob').value;
+        const gender = document.getElementById('gender').value;
+        const address = document.getElementById('address').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const gradeLevel = document.getElementById('gradeLevel').value;
+        // Display the output section
+        document.getElementById('output').style.display = 'block';
+
+        // Populate the output with form values
+        document.getElementById('outputName').textContent = name;
+        document.getElementById('outputDob').textContent = dob;
+        document.getElementById('outputGender').textContent = gender;
+        document.getElementById('outputAddress').textContent = address;
+        document.getElementById('outputEmail').textContent = email;
+        document.getElementById('outputPhone').textContent = phone;
+    });
+</script>
+
+</body>
+</html>

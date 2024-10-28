@@ -6,22 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <style>
+        /* Style for the back button */
+        .back-button {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            padding: 10px 20px;
+            height: 10px;
+            width:50px;
+            text-align: center;
+            font-size: 16px;
+            background-color: #2e04c4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: left;
+            justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('welcome.jpg');
+            background-image: url('mmm.jpg');
             background-position: center;
             background-size: cover;
         }
 
         .login-container {
-            background-color: blue;
+            background-color: rgb(203, 240, 247);
+            background-image: url('mmm.jpg');
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -80,21 +100,17 @@
         }
     </style>
 </head>
-
 <body>
-
     <div class="login-container">
         <h2>Login</h2>
         <form action="#">
-
             <input type="text" placeholder="Username" required>
             <input type="password" placeholder="Password" required>
-            <input type="submit" value="Login">
-            <a href="#">Forgot Password?</a>
+            <input type="back" value="back" class="back-button" onclick="window.location.href='home.html';">
 
+            <input type="submit" value="Login" onclick="window.location.href='courses.html';">    
+            <a href="#">Forgot Password?</a>
         </form>
     </div>
-
 </body>
-
 </html>

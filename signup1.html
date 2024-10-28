@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Learning App</title>
+    <style>
+        .back-button {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            padding: 10px 20px;
+            height: 10px;
+            width:50px;
+            text-align: center;
+            font-size: 16px;
+            background-color: #2c21cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #45a049;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            background-image: url('mmm.jpg'); /* Replace with your image path */
+        background-size: cover; /* Ensures the image covers the entire background */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position:center; /* Centers the image horizontally and vertically */
+        /* Optional: You can add more styles like background color, etc. */
+    /* Example of more specific styling */
+        }
+        .signup-container {
+            background-color: #fff;
+            background-image: url('mmm.jpg');
+            background-size: cover; /* Ensures the image covers the entire background */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        background-position:center;
+            
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            color: #000000;
+        }
+        .form-group {
+            margin-bottom: 20px;
+
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #0f0f0f;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 50%;
+            padding: 5px;
+            background-color: #7eee98;
+            color: rgb(14, 13, 13);
+            border: none;
+            border-radius: 1px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #026417;
+            color: #fff;
+            
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h2>Sign Up for Learning App</h2>
+        <form action="/submit_signup" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <div class="form-group">
+                <label for="role">I am a:</label>
+                <select id="role" name="role" required>
+                    <option value="student">Student</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+            </div>
+            <div class="form-group" id="course-group" style="display: none;">
+                <label for="course">Select a Course:</label>
+                <select id="course" name="course">
+                    <option value="math">Math</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                    <option value="language">Language Arts</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <center> <input type="submit" value="Sign Up" onclick="window.location.href='student.html';"></center>
+        <input type="back" value="back" class="back-button" onclick="window.location.href='home.html';">
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to show the course selection for students
+        const roleSelect = document.getElementById('role');
+        const courseGroup = document.getElementById('course-group');
+
+        roleSelect.addEventListener('change', function() {
+            if (this.value === 'student') {
+                courseGroup.style.display = 'block';
+            } else {
+                courseGroup.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
